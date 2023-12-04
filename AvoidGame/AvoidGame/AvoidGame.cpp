@@ -1,6 +1,22 @@
 #include <iostream>
 
+#include <SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Network.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+
+#include "Game.h"
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    Game Avoid;
+
+    while (Avoid.Running()) {
+
+        Avoid.EventHandler();
+
+        Avoid.Render();
+
+    }
 }
