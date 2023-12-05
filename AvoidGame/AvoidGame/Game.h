@@ -14,6 +14,9 @@ private:
 	RenderWindow* Window;
 	Event Event;
 
+	// Player
+	CircleShape Player;
+
 public:
 	Game();
 	~Game();
@@ -26,5 +29,8 @@ public:
 	void EventHandler();
 
 	void Render();
+
+	// Player
+	void InitPlayer();
 };
 

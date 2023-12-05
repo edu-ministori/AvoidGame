@@ -10,12 +10,16 @@
 
 int main()
 {
+    // Startup
     Game Avoid;
 
+    // Game Loop
     while (Avoid.Running()) {
 
+        // Update
         Avoid.EventHandler();
 
+        // Render
         Avoid.Render();
 
     }

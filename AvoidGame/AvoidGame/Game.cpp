@@ -5,6 +5,9 @@ Game::Game()
 	// 윈도우 초기화 및 생성
 	this->InitWindowPointer();
 	this->InitWindow();
+
+	// Player 초기화
+	this->InitPlayer();
 }
 
 Game::~Game()
@@ -60,6 +63,17 @@ void Game::Render()
 	// Clear
 	this->Window->clear(Color(50, 50, 50, 255));
 
+	// Draw
+	this->Window->draw(this->Player);
+
 	// Display
 	this->Window->display();
+}
+
+// Player
+void Game::InitPlayer()
+{
+	this->Player.setRadius(10.0f);
+	this->Player.setFillColor(Color(255, 0, 0, 255));
+	this->Player.setPosition(100,100);
 }
