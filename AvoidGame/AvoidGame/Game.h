@@ -40,6 +40,8 @@ private:
 	Text PointText;
 	Text GameOverText;
 
+	bool GameOverState;
+
 public:
 	// Startup
 	Game();
@@ -82,5 +84,6 @@ public:
 	void UpdatePointText();
 
 	void InitGameOverText();
+	void PrintGameOverText();
 };
 
